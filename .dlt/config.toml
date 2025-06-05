@@ -11,4 +11,4 @@ resources = ["a", "b", "c"] # fill this in!
 key = "value"
 
 [destination.filesystem]
-bucket_url = "_data" 
+bucket_url = "_data_" 

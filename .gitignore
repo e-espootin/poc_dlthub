@@ -5,7 +5,17 @@ build/
 dist/
 wheels/
 *.egg-info
+.pytest_cache/
+# dlt
+ls
+CHANGELOG.md
 
 # Virtual environments
 .venv
-_data/
+.env
+
+
+# generated files
+*.duckdb
+*.parquet
+_data_/

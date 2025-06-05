@@ -10,6 +10,9 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
         strategy:
             matrix:
                 python-version: ['3.12']
@@ -44,7 +47,14 @@ jobs:
           run: |   
             . .venv/bin/activate
             uv pip install pytest pytest-cov
-            pytest --cov=dlt_etl
+            pytest
+
+        - name: check dlt pipeline
+          run: |
+            . .venv/bin/activate
+            ls -ll
+            ls src/app/ingest/
+            uv run src/app/ingest/rest_api_pipeline.py
                 
         - name: Build package
           run: |
@@ -52,6 +62,7 @@ jobs:
             uv pip install build
             python -m build
                 
+
         - name: Upload package artifact
           if: ${{ github.actor != 'nektos/act' }}
           uses: actions/upload-artifact@v4

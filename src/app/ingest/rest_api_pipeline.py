@@ -1,4 +1,6 @@
 from typing import Any, Optional
+import os
+from dotenv import load_dotenv
 
 import dlt
 from dlt.common.pendulum import pendulum
@@ -9,12 +11,23 @@ from dlt.sources.rest_api import (
     rest_api_source,
 )
 
+load_dotenv()
 
 @dlt.source
-def github_source(github_access_token: Optional[str] = dlt.secrets.value) -> Any:
+def github_source(access_token: Optional[str] = dlt.secrets.value) -> Any:
 
+    
+    # 
+    if access_token is None:
+        access_token = os.getenv("ACCESS_TOKEN")
+
+    if access_token is None:
+        raise ValueError(
+            "GitHub access token is not provided. "
+            "Please set the ACCESS_TOKEN environment variable or pass it as an argument."
+        )
+    
     # Create a REST API configuration for the GitHub API
-    # Use RESTAPIConfig to get autocompletion and type checking
     config: RESTAPIConfig = {
         "client": {
             "base_url": "https://api.github.com/repos/dlt-hub/dlt/",
@@ -22,9 +35,9 @@ def github_source(github_access_token: Optional[str] = dlt.secrets.value) -> Any
             "auth": (
                 {
                     "type": "bearer",
-                    "token": github_access_token,
+                    "token": access_token,
                 }
-                if github_access_token
+                if access_token
                 else None
             ),
         },
