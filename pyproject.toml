@@ -9,3 +9,8 @@ dependencies = [
     "pandas>=2.2.3",
     "pytest>=8.4.0",
 ]
+
+[dependency-groups]
+dev = [
+    "dotenv>=0.9.9",
+]

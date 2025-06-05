@@ -1,5 +1,6 @@
 from typing import Any, Optional
 import os
+from dotenv import load_dotenv
 
 import dlt
 from dlt.common.pendulum import pendulum
@@ -10,6 +11,7 @@ from dlt.sources.rest_api import (
     rest_api_source,
 )
 
+load_dotenv()
 
 @dlt.source
 def github_source(access_token: Optional[str] = dlt.secrets.value) -> Any:

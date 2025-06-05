@@ -10,6 +10,9 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
         strategy:
             matrix:
                 python-version: ['3.12']
