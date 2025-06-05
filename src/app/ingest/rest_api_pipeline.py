@@ -11,7 +11,7 @@ from dlt.sources.rest_api import (
 
 
 @dlt.source
-def github_source(github_access_token: Optional[str] = dlt.secrets.value) -> Any:
+def github_source(access_token: Optional[str] = dlt.secrets.value) -> Any:
 
     # Create a REST API configuration for the GitHub API
     # Use RESTAPIConfig to get autocompletion and type checking
@@ -22,9 +22,9 @@ def github_source(github_access_token: Optional[str] = dlt.secrets.value) -> Any
             "auth": (
                 {
                     "type": "bearer",
-                    "token": github_access_token,
+                    "token": access_token,
                 }
-                if github_access_token
+                if access_token
                 else None
             ),
         },
