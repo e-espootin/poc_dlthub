@@ -17,7 +17,7 @@ def github_source(access_token: Optional[str] = dlt.secrets.value) -> Any:
     
     # 
     if access_token is None:
-        access_token = os.getenv["ACCESS_TOKEN"]
+        access_token = os.getenv("ACCESS_TOKEN")
 
     if access_token is None:
         raise ValueError(
