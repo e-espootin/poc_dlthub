@@ -2,6 +2,17 @@
 
 <!-- version list -->
 
+## v1.1.1 (2025-06-05)
+
+### Bug Fixes
+
+- Update Readme
+  ([`fc9d43f`](https://github.com/e-espootin/poc_dlthub/commit/fc9d43fbd910795ce89d61cca397ba617eb49466))
+
+- Update Readme2
+  ([`b93af40`](https://github.com/e-espootin/poc_dlthub/commit/b93af40e2156c15aa2f3b6042e640f8409147a44))
+
+
 ## v1.1.0 (2025-06-05)
 
 ### Features
