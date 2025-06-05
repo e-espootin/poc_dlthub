@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.3 (2025-06-05)
+
+### Bug Fixes
+
+- Change secret
+  ([`0cb3465`](https://github.com/e-espootin/poc_dlthub/commit/0cb346583640f126d6dc2634941fa5c5089be4fe))
+
+
 ## v1.1.2 (2025-06-05)
 
 ### Bug Fixes
