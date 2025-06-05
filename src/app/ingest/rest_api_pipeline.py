@@ -15,7 +15,6 @@ load_dotenv()
 
 @dlt.source
 def github_source(access_token: Optional[str] = dlt.secrets.value) -> Any:
-
     
     # 
     if access_token is None:

@@ -1,7 +1,7 @@
 [project]
 name = "poc-project-dl"
 version = "0.1.0"
-description = "Add your description here"
+description = "dlt pipeline POC"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

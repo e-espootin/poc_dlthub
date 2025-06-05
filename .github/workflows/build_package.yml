@@ -40,20 +40,16 @@ jobs:
           run: |
             . .venv/bin/activate 
             uv pip install ruff
-            ruff check .
             ruff check . --select N
                 
         - name: Test with pytest
           run: |   
             . .venv/bin/activate
-            uv pip install pytest pytest-cov
             pytest
 
-        - name: check dlt pipeline
+        - name: Run dlt pipeline with test or sample data
           run: |
             . .venv/bin/activate
-            ls -ll
-            ls src/app/ingest/
             uv run src/app/ingest/rest_api_pipeline.py
                 
         - name: Build package
