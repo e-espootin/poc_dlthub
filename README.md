@@ -1,46 +1,26 @@
 
-
-
-
-
-
-
-
-
----
-
 ## Project Overview
 
 This repository is a simple showcase Python package demonstrating how to use [dlt](https://dlthub.com/) for data extraction and loading. The package is structured to extract data from sources and load it into parquet, DuckDB and etc, serving as a reference for integrating dlt in your own projects.
 
 ## Getting Started
 
-### Clone the Repository
-
+### Clone and run 
+import package from pypi or clone and run
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/e-espootin/poc_dlthub
+cd poc_dlthub
+make run
 ```
 
-### Install Dependencies
 
-Follow the steps in the [how to](#how-to) section above to set up your environment and install required packages.
-
-### Running the Package
-
-You can run the dlt pipeline either by installing dlt from PyPI or by referencing a specific version:
-
-```bash
-# Install latest dlt from PyPI
-uv pip install -U dlt
-
-```
 
 The main dlt pipeline file is located at:
 
 ```
 src/app/ingest/
 ```
+- ignore : src\app\utils
 
 Refer to this path when running or modifying the pipeline.
 

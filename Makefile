@@ -1,4 +1,5 @@
 .PHONY: all build test release clean run gh act
+export .env
 
 gh:
 	gh repo create poc_dlthub --private
