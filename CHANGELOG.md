@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.2 (2025-06-05)
+
+### Bug Fixes
+
+- Release permission issue
+  ([`e9f3168`](https://github.com/e-espootin/poc_dlthub/commit/e9f3168684561c290ee10bdab0cfab0e9d94d2fe))
+
+
 ## v1.1.1 (2025-06-05)
 
 ### Bug Fixes
